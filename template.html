@@ -1,0 +1,1205 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Test</title>
+        <style type="text/css">
+            html,
+            body,
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            table {
+                page-break-inside: auto;
+                border-collapse: collapse;
+            }
+
+            tr {
+                page-break-inside: avoid;
+                page-break-after: auto
+            }
+
+            td {
+                page-break-inside: avoid;
+                page-break-after: auto
+            }
+
+            div {
+                page-break-inside: avoid;
+            }
+
+            thead {
+                display: table-header-group;
+            }
+
+            tfoot {
+                display: table-footer-group
+            }
+
+            /* tbody {
+                display: table;
+                width: 100%;
+                table-layout: fixed;
+            } */
+
+            @media screen {
+                div.divFooter {
+                    display: none;
+                }
+
+                div.divHeader {
+                    display: none;
+                }
+
+
+            }
+
+            @media print {
+                div.divFooter {
+                    position: fixed;
+                    height: 250px;
+                    bottom: 0;
+                    left: 0;
+                    text-align: left;
+                    display: block;
+                }
+
+                div.divHeader {
+                    position: fixed;
+                    height: 100px;
+                    top: 0;
+                    left: 0;
+                    display: block;
+
+                }
+
+                div.divBody {
+                    height: calc(100% - 350px);
+                    position: relative;
+                    text-align: left;
+                    margin-top: 20rem;
+                    margin-bottom: -20rem;
+                    page-break-after: always;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <table style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>
+                        <div class="divHeader" style="display: inline-block; width: 100%;">
+                            <table style="width: 100%; text-align: left;">
+                                <tr>
+                                    <td><img style="width: 120px; height: 120px;"
+                                            src="https://bp.doctor2u.my/assets/img/bplogo.png">
+                                    </td>
+                                    <td style="vertical-align: top; ">
+                                        <table>
+                                            <tr style="margin-left: 1 rem;">
+                                                <td colspan="2">
+                                                    <a
+                                                        style="font-family:Helvetica;font-weight: bold; font-size: 20pt;">
+                                                        PATHOLOGY
+                                                        REPORT
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <span>B. P. CLINICAL LAB SDN. BHD. (152314-H)</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>[BranchAddress] ,</span>
+                                                </td>
+                                                <td>
+                                                    <span>&nbsp;&nbsp;&nbsp;[BranchEmail]</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label>Tel : </label><span>[BranchTel]</span>
+                                                </td>
+                                                <td>
+                                                    <label>Fax : </label><span>[BranchFax]</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <label>GST Reg No. : </label><span>[GST]</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="width: 100%; text-align: left;">
+                                <tr>
+                                    <td>
+                                        <label>Client PatientID :</label><span>[ClientId]</span>
+                                    </td>
+                                    <td colspan="2">
+                                        <label>Barcode :</label><span>[LabNo]</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <label>Patient Name :</label><span>[PatientName]</span>
+                                    </td>
+                                    <td>
+                                        <label>Age/Gender :</label><span>[Age] / [Gender]</span>
+                                    </td>
+                                </tr>
+                                <tr class="spaceUnder">
+                                    <td>
+                                        <label>NRIC No :</label><span>[IC]</span>
+                                    </td>
+                                    <td>
+                                        <label>Refer No :</label><span>[ReferNo]</span>
+                                    </td>
+                                    <td>
+                                        <label>Branch :</label><span>[BranchName]</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <label>Client Name :</label><span>[ClinicName]</span>
+                                    </td>
+                                    <td>
+                                        <label>Tel :</label><span>[Tel]</span>
+                                    </td>
+                                </tr>
+                                <tr class="spaceUnder2">
+                                    <td colspan="2">
+                                        <label>Doctor’s Name :</label><span>[DoctorName]</span>
+                                    </td>
+                                    <td>
+                                        <label>Fax:</label><span>[Fax]</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <label>Specimen :</label><span>[Specimen]</span><span>-sampled at
+                                        </span><span>[SampleDate]</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <label>Received :</label><span>[LabNo] by [ReceivedBranch]
+                                            [ReceiveDate]</span>
+                                    </td>
+                                </tr>
+                            </table>
+                            <label for="" style="float: right;">Page 2 of 3</label>
+                            <table
+                                style="border-top: 5px solid black; width: 100%;  border-spacing: 1rem; text-align: center;"
+                                class="spaceUnderTable">
+                                <tr class="spaceUnder">
+                                    <th>
+                                        <label for="">TEST NAME</label>
+                                    </th>
+                                    <th>
+                                        <label for="">RESULT</label>
+                                    </th>
+                                    <th>
+                                        <label for="">UNIT</label>
+                                    </th>
+                                    <th>
+                                        <label for="">REFERENCE NOTE</label>
+                                    </th>
+                                    <th>
+                                        <label for="">RESULT</label>
+                                    </th>
+                                    <th>
+                                        <label for="">UNIT</label>
+                                    </th>
+                                    <th>
+                                        <label for="">REFERENCE NOTE</label>
+                                    </th>
+                                </tr>
+                            </table>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>
+                        <div class="divFooter" style="display: inline-block; width: 100%; left:0px;
+                                    bottom:0px; text-align: left;">
+                            <table style="width: 100%; margin-top: 1rem;">
+                                <tr>
+                                    <td rowspan="7" style="width: 20%;">
+                                        <!-- [Image] -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Results validated and authorised through the Laboratory information
+                                        System.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Results checked and authorised for release
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Test done at B.P. Clinical Lab Sdn. Bhd. (Ipoh) 273-B Jalan Raja
+                                        Permaisuri
+                                        Bainun,
+                                        30250
+                                        Ipoh, Perak.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Tel: 05-2559090 Fax:05-2419226
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Ipoh lab is a MS ISO 15189 accredited lab
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        * Not SAMM Accredited
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <p style=" margin-top: 1rem; text-align: center;">
+                                            For further confirmation, please
+                                            repeat test with another
+                                            fresh
+                                            specimen, if desired.
+                                            Should
+                                            you
+                                            have further enquiries, please
+                                            contact your nearest BP branch or mail us at
+                                            corpcare@bphealthcare.com
+                                            <br>
+                                            [BranchAddress], [BranchEmail]
+                                            Tel: <span>[Tel]</span>,
+                                            Fax: [Fax]
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="divBody">
+                            <table style="width: 100%;  border-spacing: 1rem; text-align: center;"
+                                class="spaceUnderTable">
+                                <!-- LIPIDS STUDIES -->
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for=""><strong>Full Blood Count</strong></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Total RBC</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalRBCResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalRBCUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalRBCRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalRBCResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalRBCUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalRBCRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Haemoglobin (Hb)</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HaemoglobinResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HaemoglobinUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HaemoglobinRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HaemoglobinResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HaemoglobinUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HaemoglobinRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Haematocrit(PCV)</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PCVResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PCVUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PCVRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PCVResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PCVUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PCVRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">MCV</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCVResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCVUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCVRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCVResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCVUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCVRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">MCH</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">MCHC</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHCResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHCUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHCRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHCResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHCUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MCHCRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">RDW</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RDWResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RDWUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RDWRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RDWResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RDWUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RDWRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Total WBC</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalWBCResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalWBCUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalWBCRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalWBCResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalWBCUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TotalWBCRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for=""><strong>Differential Count</strong></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Polymorphs %</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NeutrophilsResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NeutrophilsUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NeutrophilsRefRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NeutrophilsAbsResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NeutrophilsAbsRef]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NeutrophilsRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Lymphocytes %</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LymphocytesResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LymphocytesUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LymphocytesRefRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LymphocytesAbsResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LymphocytesAbsRef]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LymphocytesAbsRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Monocytes %</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MonocytesResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MonocytesUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MonocytesRefRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MonocytesAbsResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MonocytesAbsRef]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[MonocytesAbsRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Eosinophils %</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EosinophilsResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EosinophilsUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EosinophilsRefRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EosinophilsAbsResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EosinophilsAbsRef]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EosinophilsAbsRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Basophils %</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BasophilsResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BasophilsUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BasophilsRefRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BasophilsAbsResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BasophilsAbsRef]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BasophilsAbsRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Platelet count</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PlateletResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PlateletUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PlateletReferenceRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PlateletResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PlateletUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PlateletReferenceRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for=""><strong>LIPIDS STUDIES</strong></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Total Cholesterol</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[CholesterolResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[CholesterolUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[CholesterolRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[CholesterolResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[CholesterolUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[CholesterolRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Triglycerides</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TriglyceridesResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TriglyceridesUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TriglyceridesRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TriglyceridesResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TriglyceridesUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TriglyceridesRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">HDL - Cholesterol</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HDLCholesterolResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HDLCholesterolUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HDLCholesterolRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HDLCholesterolResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HDLCholesterolUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[HDLCholesterolRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">*LDL - Cholesterol</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LDLCholesterolResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LDLCholesterolUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LDLCholesterolRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LDLCholesterolResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LDLCholesterolUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[LDLCholesterolRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">*Total Chol/HDL-Chol</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RatioResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RatioRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RatioResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RatioRange]</label>
+                                    </td>
+                                </tr>
+                                <!-- LIPIDS STUDIES -->
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">*Non-HDL Cholesterol</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NonHDLResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NonHDLUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NonHDLRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NonHDLResult2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NonHDLUnit2]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[NonHDLRange2]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" align="center">
+                                        <table style="border: 3px solid black; width: 40%;">
+                                            <tr>
+                                                <td colspan="3">Non-HDL Cholesterol</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    mg/dL
+                                                </td>
+                                                <td>
+                                                    mmol/L
+                                                </td>
+                                                <td>
+                                                    Levels of Classification
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    >=220
+                                                </td>
+                                                <td>
+                                                    >=5.70
+                                                </td>
+                                                <td>
+                                                    Very high
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    190-219
+                                                </td>
+                                                <td>
+                                                    4.92-5.67
+                                                </td>
+                                                <td>
+                                                    High
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    160-189
+                                                </td>
+                                                <td>
+                                                    4.14-4.90
+                                                </td>
+                                                <td>
+                                                    Borderline high
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    130-159
+                                                </td>
+                                                <td>
+                                                    3.37-4.12
+                                                </td>
+                                                <td>
+                                                    Above desirable
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    &lt;130
+                                                </td>
+                                                <td>
+                                                    &lt;3.37
+                                                </td>
+                                                <td>
+                                                    Desirable
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">(Reference : National Lipid Association)
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for=""><strong>FEME & Specific Gravity</strong></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for=""><strong>Urinalysis Strip</strong></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">pH</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PhResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PhRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PhResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PhRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Protein</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[UrineProResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[UrineProRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[UrineProResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[UrineProRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Glucose</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[GluResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[GluRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[GluResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[GluRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Ketone</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[KetoneResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[KetoneRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[KetoneResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[KetoneRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Blood</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BloodResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BloodRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BloodResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BloodRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Colour</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[ColourResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[ColourRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[ColourResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[ColourRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Transparency</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TransparencyResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TransparencyRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TransparencyResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[TransparencyRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Specific Gravity</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[SGResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[SGRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[SGResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[SGRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for=""><strong>Urine Microscopy</strong></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;" colspan="3">
+                                        <label for=""><strong>Wet smear (Urine deposit ) :-</strong></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Pus cells</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PusResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PusUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PusRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PusResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PusUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[PusRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">RBC</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RBCResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RBCUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RBCRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RBCResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RBCUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[RBCRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Casts</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[CastsResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[CastsUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                    <td>
+                                        <label for="">[CastsResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[CastsUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for=""></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="7" align="center">
+                                        <table style="border: 3px solid black; width: 50%;">
+                                            <tr>
+                                                <td colspan="3">Hyaline 0-1/LPF ,granular cast present is
+                                                    abnormal
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Epithelia</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EpitheliumResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EpitheliumUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EpitheliumRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EpitheliumResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EpitheliumUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[EpitheliumRange]</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <label for="">Bacteria</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BacteriaResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BacteriaUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BacteriaRange]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BacteriaResult]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BacteriaUnit]</label>
+                                    </td>
+                                    <td>
+                                        <label for="">[BacteriaRange]</label>
+                                    </td>
+                                </tr>
+                                <br>
+                                <br>
+
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+
+</html>
